@@ -1,1 +1,3 @@
-# css3-preloader
+# CSS3 Preloader
+
+Minimal HTML preloader template with vanilla JavaScript functionality.
