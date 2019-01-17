@@ -1,11 +1,38 @@
-/*
- * lay-out
- */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+  transition: all 0.3s 1s ease-out;
+  &__section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #222222;
+    z-index: 1000;
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  }
+  &__section-left {
+    left: 0;
+  }
+  &__section-right {
+    right: 0;
+  }
+}
 
-/*
- * components
- */
-
-/*
- * styling
- */
+/* state */
+.js-page-loaded {
+  .loader {
+    visibility: hidden;
+    transform: translateY(-100%);
+    &__section-left {
+      transform: translateX(-100%);
+    }
+    &__section-right {
+      transform: translateX(100%);
+    }
+  }
+}
